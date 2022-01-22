@@ -1,0 +1,11 @@
+query GetWalletAssets {{
+  user (id: "{0}" ) {{
+    id
+    ownerAssets (where: {{amount_gt: 0}}) {{
+      amount
+      asset {{
+        tokenId
+      }}
+    }}
+  }}
+}}
